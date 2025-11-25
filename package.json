@@ -1,0 +1,41 @@
+{
+  "name": "student-chatbot",
+  "version": "1.0.0",
+  "description": "AI-Powered Chatbot for Student Services - Final Year Project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "chatbot",
+    "student-services",
+    "react",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@aws-amplify/auth": "^6.17.0",
+    "@aws-sdk/client-lex-runtime-v2": "^3.934.0",
+    "aws-amplify": "^6.15.8",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^5.1.0"
+  }
+}
