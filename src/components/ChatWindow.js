@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import MessageInput from './MessageInput';
+import { useEffect, useRef, useState } from 'react';
 import { sendToAmazonLex } from '../services/chatbotService';
 import './ChatWindow.css';
+import MessageInput from './MessageInput';
 
 const ChatWindow = ({ isOpen, onClose, user }) => {
   const [messages, setMessages] = useState([
@@ -21,7 +21,9 @@ const ChatWindow = ({ isOpen, onClose, user }) => {
     { text: "Register for a course", icon: "📚" },
     { text: "View my registered courses", icon: "📋" },
     { text: "What courses are available?", icon: "🔍" },
-    { text: "Library hours", icon: "📖" }
+    { text: "Library hours", icon: "📖" },
+    { text: "Hello", icon: "👋" },
+    { text: "What are my grades?", icon: "📊" }
   ];
 
   const scrollToBottom = () => {
