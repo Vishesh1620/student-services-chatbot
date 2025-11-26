@@ -1,15 +1,20 @@
 import React from 'react';
 import './Portal.css';
 
-const Portal = ({ onLogout, user }) => {
+const Portal = ({ onLogout, user, isDarkMode, onToggleTheme }) => {
   return (
     <div className="portal-container">
       <header className="portal-header">
         <div className="header-content">
           <h1>Student Portal Dashboard</h1>
-          <button onClick={onLogout} className="logout-button">
-            Logout
-          </button>
+          <div className="header-buttons">
+            <button onClick={onToggleTheme} className="theme-toggle-button">
+              {isDarkMode ? '☀️' : '🌙'}
+            </button>
+            <button onClick={onLogout} className="logout-button">
+              Logout
+            </button>
+          </div>
         </div>
       </header>
       

@@ -16,10 +16,17 @@ function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Check if user is already logged in on app load
   useEffect(() => {
     checkAuthState();
+    // Load theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setIsDarkMode(true);
+      document.body.classList.add('dark-mode');
+    }
   }, []);
 
   const checkAuthState = async () => {
@@ -65,6 +72,18 @@ function App() {
     setIsChatOpen(!isChatOpen);
   };
 
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode;
+    setIsDarkMode(newTheme);
+    if (newTheme) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
   // Show loading spinner while checking auth state
   if (loading) {
     return (
@@ -81,7 +100,7 @@ function App() {
         <LoginPage onLogin={handleLogin} />
       ) : (
         <>
-          <Portal user={user} onLogout={handleLogout} />
+          <Portal user={user} onLogout={handleLogout} isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
           <FloatingChatButton onClick={toggleChat} />
           {isChatOpen && (
             <ChatWindow 
