@@ -316,12 +316,6 @@ const LoginPage = ({ onLogin }) => {
             Don't have an account? Sign up
           </button>
         </form>
-        
-        <div className="demo-info">
-          <p><strong>Demo Credentials:</strong></p>
-          <p>Email: alice.johnson@school.edu</p>
-          <p>Password: Test123!</p>
-        </div>
       </div>
     </div>
   );
