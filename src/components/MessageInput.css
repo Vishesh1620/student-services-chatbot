@@ -33,7 +33,7 @@
 }
 
 .message-textarea:focus {
-  border-color: #667eea;
+  border-color: #f97316;
 }
 
 .message-textarea::placeholder {
@@ -47,7 +47,7 @@
 }
 
 .send-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   border: none;
   width: 40px;
   height: 40px;
@@ -63,7 +63,7 @@
 
 .send-button:hover:not(:disabled) {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
 
 .send-button:active:not(:disabled) {
